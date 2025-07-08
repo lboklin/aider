@@ -438,6 +438,7 @@ class TestModels(unittest.TestCase):
             model=model.name,
             messages=messages,
             stream=False,
+            tools=[],
             temperature=0,
             num_ctx=expected_ctx,
             timeout=600,
@@ -456,6 +457,7 @@ class TestModels(unittest.TestCase):
             model=model.name,
             messages=messages,
             stream=False,
+            tools=[],
             temperature=0,
             num_ctx=4096,
             timeout=600,
@@ -473,6 +475,7 @@ class TestModels(unittest.TestCase):
             model=model.name,
             messages=messages,
             stream=False,
+            tools=[],
             temperature=0,
             timeout=600,
         )
@@ -503,6 +506,7 @@ class TestModels(unittest.TestCase):
             model=model.name,
             messages=messages,
             stream=False,
+            tools=[],
             temperature=0,
             timeout=600,  # Default timeout
         )
@@ -518,6 +522,7 @@ class TestModels(unittest.TestCase):
             model=model.name,
             messages=messages,
             stream=False,
+            tools=[],
             temperature=0,
             timeout=300,  # From extra_params
         )
@@ -532,6 +537,7 @@ class TestModels(unittest.TestCase):
             model=model.name,
             messages=messages,
             stream=False,
+            tools=[],
             temperature=0,
             timeout=600,
         )
@@ -550,6 +556,7 @@ class TestModels(unittest.TestCase):
         mock_completion.assert_called_with(
             model=model.name,
             messages=messages,
+            tools=[],
             stream=False,
             temperature=0.7,
             timeout=600,
